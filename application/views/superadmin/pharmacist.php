@@ -14,7 +14,7 @@
                     <div class="card">
                         <div class="card-header row">
                             <h5 class="col-10">List of Pharmacist</h5>
-                            <button type="button" class="btn btn-primary col-2" data-toggle="modal" data-target="#modaltambah">Add Pharmacist</button>
+                            <button type="button" class="btn btn-primary col-2" data-coreui-toggle="modal" data-coreui-target="#modaltambah">Add Pharmacist</button>
                         </div>
                         <div class="card-body">
                                     <div class="table-responsive">
@@ -42,6 +42,44 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="modal fade" id="modaltambah">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" style="font-size: 20px;">Tambah Pharmacist</h5>
+                                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label>Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="txtnama">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control" id="txtuser">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>No. Handphone</label>
+                                        <input type="text" class="form-control" id="txthp">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label>Password</label>
+                                      <input type="password" class="form-control" id="txtpass">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label>Repeat Password</label>
+                                      <input type="password" class="form-control" id="txtrepass">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="tambahdata()">Simpan</button>
+                                <button type="button" class="btn btn-danger" onclick="">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     </div>
                 </div>
                 </div>

@@ -22,7 +22,7 @@
                   </div></li>
       <li class="nav-title"></li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="dashboard">
           <svg class="nav-icon">
             <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-speedometer')?>"></use>
           </svg>
@@ -30,21 +30,22 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="employee">
           <svg class="nav-icon">
             <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-chart-line')?>"></use>
           </svg>
           Employee Sales
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <svg class="nav-icon">
-            <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-people')?>"></use>
-          </svg>
-          Pharmacist
-        </a>
-      </li>
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-cart')?>"></use>
+            </svg>Sales</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="selling"><span class="nav-icon"></span> Selling</a></li>
+            <li class="nav-item"><a class="nav-link" href="stok"><span class="nav-icon"></span> Stok</a></li>
+          </ul>
+        </li>
     </ul>
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>

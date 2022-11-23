@@ -20,7 +20,7 @@
                           <div class="mb-3 text-secondary">
                             <i class="fa fa-cart-plus fa-3x" aria-hidden="true"></i>
                           </div>
-                          <h3><strong>20.000.000,00</strong></h3>
+                          <h3><strong>1.000.000,00</strong></h3>
                           <div class="row">
                           <h6 class="col-7">Your Income :</h6>
                           <div class="dropdown-center col-3">
@@ -47,9 +47,9 @@
                           <div class="mb-3 text-warning">
                             <i class="fa fa-money fa-3x" aria-hidden="true"></i>
                           </div>
-                          <h3><strong>15.000.000,00</strong></h3>
+                          <h3><strong>200</strong></h3>
                           <div class="row mx-2">
-                          <h6 class="col-6">Expense :</h6>
+                          <h6 class="col-6">Selling</h6>
                           <div class="dropdown-center col-5">
                               <a class="dropdown-toggle text-dark" style="text-decoration:none;" type="button" data-coreui-toggle="dropdown" aria-expanded="false">
                                 Jan 2022</a>

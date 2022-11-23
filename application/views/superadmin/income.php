@@ -64,7 +64,7 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-10"></div>
-                        <a href="#" class="btn btn-secondary col-2">Print Invoice</a>
+                        <a href="#" class="btn btn-secondary col-2"><i class="fa fa-file" aria-hidden="true"></i> Print Invoice</a>
                     </div>
                 </div>
               </div>

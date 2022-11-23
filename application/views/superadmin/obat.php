@@ -63,51 +63,99 @@
                   <div class="col-md-12">
                     <div class="card">
                         <div class="card-header row">
-                            <h5 class="col-10">All Drugs Stok</h5>
-                            <button type="button" class="btn btn-primary col-2" data-toggle="modal" data-target="#modaltambah">Add Data</button>
+                          <h5 class="col-10">All Drugs Stok</h5>
+                          <button type="button" class="btn btn-primary col-2" data-coreui-toggle="modal" data-coreui-target="#modaltambah">Add Data</button>
                         </div>
                         <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table id="example" class="display table table-striped table-hover" >
-                                            <thead>
-                                                <tr>
-                                                    <th>Kode Obat</th>
-                                                    <th>Nama Obat</th>
-                                                    <th>Stok</th>
-                                                    <th>Expired</th>
-                                                    <th>Harga Beli</th>
-                                                    <th>Harga Jual</th>
-                                                    <th>Added at</th>
-                                                    <th>Added by</th>
-                                                    <th>Updated at</th>
-                                                    <th>Updated by</th>
-                                                    <th>Operasi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                              <tr>
-                                                  <td>Row 1 Data 1</td>
-                                                  <td>Row 1 Data 2</td>
-                                                  <td>Row 1 Data 1</td>
-                                                  <td>Row 1 Data 2</td>
-                                                  <td>Row 1 Data 1</td>
-                                                  <td>Row 1 Data 2</td>
-                                                  <td>Row 1 Data 2</td>
-                                                  <td>Row 1 Data 1</td>
-                                                  <td>Row 1 Data 2</td>
-                                                  <td>Row 1 Data 1</td>
-                                                  <td>Row 1 Data 2</td>
-                                              </tr>
-                                          </tbody>
-                                        </table>
+                          <div class="table-responsive">
+                            <table id="example" class="display table table-striped table-hover" >
+                              <thead>
+                                <tr>
+                                  <th>Kode Obat</th>
+                                  <th>Nama Obat</th>
+                                  <th>Stok</th>
+                                  <th>Expired</th>
+                                  <th>Harga Beli</th>
+                                  <th>Harga Jual</th>
+                                  <th>Added at</th>
+                                  <th>Added by</th>
+                                  <th>Updated at</th>
+                                  <th>Updated by</th>
+                                  <th>Operasi</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Row 1 Data 1</td>
+                                  <td>Row 1 Data 2</td>
+                                  <td>Row 1 Data 1</td>
+                                  <td>Row 1 Data 2</td>
+                                  <td>Row 1 Data 1</td>
+                                  <td>Row 1 Data 2</td>
+                                  <td>Row 1 Data 2</td>
+                                  <td>Row 1 Data 1</td>
+                                  <td>Row 1 Data 2</td>
+                                  <td>Row 1 Data 1</td>
+                                  <td>Row 1 Data 2</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="modaltambah">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" style="font-size: 20px;">Tambah Obat</h5>
+                                <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label>Kode Obat</label>
+                                        <input type="text" class="form-control" id="txtkode">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Nama Obat</label>
+                                        <input type="text" class="form-control" id="txtnama">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Stok</label>
+                                        <input type="number" class="form-control" id="txtstok">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Expired</label>
+                                        <input type="date" class="form-control" id="txtexp">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label>Harga Beli</label>
+                                      <div class="input-group">
+                                        <span class="input-group-text col-md-2">Rp.</span>
+                                        <input type="number" class="form-control" id="txtbuy">
+                                        <span class="input-group-text col-sm-2">.00</span>
+                                      </div>  
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label>Harga Jual</label>
+                                      <div class="input-group">
+                                        <span class="input-group-text col-md-2">Rp.</span>
+                                        <input type="number" class="form-control" id="txtsell">
+                                        <span class="input-group-text col-sm-2">.00</span>
+                                      </div>  
                                     </div>
                                 </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="tambahdata()">Simpan</button>
+                                <button type="button" class="btn btn-danger" onclick="">Reset</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 </div>
-              </div>
+            </div>
         </div>
         <?php $this->load->view("superadmin/_partials/footer.php") ?>
         <?php $this->load->view("superadmin/_partials/js.php") ?>
