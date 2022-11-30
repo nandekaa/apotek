@@ -43,7 +43,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="selling">
           <svg class="nav-icon">
             <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-graph')?>"></use>
           </svg>

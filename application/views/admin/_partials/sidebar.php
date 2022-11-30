@@ -22,7 +22,7 @@
                   </div></li>
       <li class="nav-title"></li>
       <li class="nav-item">
-        <a class="nav-link" href="admin">
+        <a class="nav-link" href="index">
           <svg class="nav-icon">
             <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-speedometer')?>"></use>
           </svg>
@@ -30,7 +30,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin/sales">
+        <a class="nav-link" href="sales">
           <svg class="nav-icon">
             <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-chart-line')?>"></use>
           </svg>

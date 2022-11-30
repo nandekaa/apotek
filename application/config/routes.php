@@ -57,7 +57,11 @@ $route['dashboard-superadmin'] = 'superadmin/dashboard';
 $route['obat-superadmin'] = 'superadmin/obat';
 $route['income-superadmin'] = 'superadmin/income';
 $route['pharmacist-superadmin'] = 'superadmin/pharmacist';
+$route['selling-superadmin'] = 'superadmin/selling';
 
 $route['admin'] = 'admin/index';
 $route['dashboard-admin'] = 'admin/dashboard';
+$route['sales-admin'] = 'admin/sales';
+$route['stok-admin'] = 'admin/stok';
+$route['expired-admin'] = 'admin/expired';
 $route['register-admin'] = 'admin/register';
