@@ -12,17 +12,14 @@
                         <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-options')?>"></use>
                       </svg>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#"><svg class="icon me-2">
-                                <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-user')?>"></use>
-                              </svg>My Profile</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><svg class="icon me-2">
+                    <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">
+                              <svg class="icon me-2">
                                 <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-account-logout')?>"></use>
                               </svg>Logout</a></div>
                   </div></li>
       <li class="nav-title"></li>
       <li class="nav-item">
-        <a class="nav-link" href="dashboard">
+        <a class="nav-link" href="index">
           <svg class="nav-icon">
             <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-speedometer')?>"></use>
           </svg>

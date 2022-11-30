@@ -6,7 +6,7 @@
     <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
     <li class="nav-title"></li>
         <li class="nav-item row"><span class="nav-item mx-5 col-5">
-            <?php echo 'admin' ?><br><span class="text-warning">Admin</span></span><div class="dropdown col-2">
+            Disty<br><span class="text-warning">Superadmin</span></span><div class="dropdown col-2">
                     <button class="btn btn-transparent text-white p-0" type="button" data-coreui-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <svg class="icon">
                         <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-options')?>"></use>
@@ -22,7 +22,7 @@
                   </div></li>
       <li class="nav-title"></li>
       <li class="nav-item">
-        <a class="nav-link" href="admin">
+        <a class="nav-link" href="dashboard">
           <svg class="nav-icon">
             <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-speedometer')?>"></use>
           </svg>
@@ -30,22 +30,37 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin/sales">
+        <a class="nav-link" href="obat">
           <svg class="nav-icon">
-            <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-chart-line')?>"></use>
+            <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-storage')?>"></use>
           </svg>
-          Employee Sales
+          Master Obat
         </a>
       </li>
-      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-cart')?>"></use>
-            </svg>Sales</a>
-          <ul class="nav-group-items">
-            <li class="nav-item"><a class="nav-link" href="selling"><span class="nav-icon"></span> Selling</a></li>
-            <li class="nav-item"><a class="nav-link" href="stok"><span class="nav-icon"></span> Stok</a></li>
-          </ul>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="income">
+          <svg class="nav-icon">
+            <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-newspaper')?>"></use>
+          </svg>
+          Income Statement
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-graph')?>"></use>
+          </svg>
+          Selling Report
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pharmacist">
+          <svg class="nav-icon">
+            <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-people')?>"></use>
+          </svg>
+          Pharmacist
+        </a>
+      </li>
     </ul>
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>
