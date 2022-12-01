@@ -35,9 +35,17 @@
                             </div>
                           </div>
                         </div>
-                        <div class="card-footer bg-secondary text-white border-secondary"><a href="sales" class="text-white" style="text-decoration:none;">View Detailed Report <svg class="icon">
-                                  <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-chevron-double-right')?>"></use>
-                                </svg></a></div>
+                        <?php if($this->session->userdata('access')=='Admin'){ ?>
+                          <div class="card-footer bg-secondary text-white border-secondary"><a href="sales" class="text-white" style="text-decoration:none;">View Detailed Report <svg class="icon">
+                              <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-chevron-double-right')?>"></use>
+                                </svg></a>
+                          </div>
+                        <?php } if($this->session->userdata('access')=='Superadmin'){ ?>
+                          <div class="card-footer bg-secondary text-white border-secondary"><a href="income" class="text-white" style="text-decoration:none;">View Detailed Report <svg class="icon">
+                              <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-chevron-double-right')?>"></use>
+                                </svg></a>
+                          </div>
+                        <?php } ?>
                       </div>
                     </div>
                     <?php if($this->session->userdata('access')=='Admin'){ ?>
@@ -90,7 +98,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="card-footer bg-warning text-white border-warning"><a href="#" class="text-white" style="text-decoration:none;">View Detailed Report <svg class="icon">
+                        <div class="card-footer bg-warning text-white border-warning"><a href="income" class="text-white" style="text-decoration:none;">View Detailed Report <svg class="icon">
                                   <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-chevron-double-right')?>"></use>
                                 </svg></a></div>
                       </div>

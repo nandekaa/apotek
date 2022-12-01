@@ -9,12 +9,12 @@
             <?php $this->load->view("_partials/header.php") ?>
             <div class="body flex-grow-1 px-3">
                 <div class="container-lg">
-                <h2>Master Obat</h2>
+                <h2>Pegawai</h2>
                   <div class="col-md-12 mt-5">
                     <div class="card">
                         <div class="card-header row">
-                            <h5 class="col-10">List of Pharmacist</h5>
-                            <button type="button" class="btn btn-primary col-2" data-coreui-toggle="modal" data-coreui-target="#modaltambah">Add Pharmacist</button>
+                            <h5 class="col-10">List Pegawai</h5>
+                            <button type="button" class="btn btn-primary col-2" data-coreui-toggle="modal" data-coreui-target="#modaltambah">Tambah</button>
                         </div>
                         <div class="card-body">
                                     <div class="table-responsive">
@@ -46,7 +46,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" style="font-size: 20px;">Tambah Pharmacist</h5>
+                                <h5 class="modal-title" style="font-size: 20px;">Tambah Apoteker</h5>
                                 <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
