@@ -49,19 +49,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'auth';
+$route['default_controller'] = 'dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['superadmin'] = 'superadmin/index';
-$route['dashboard-superadmin'] = 'superadmin/dashboard';
-$route['obat-superadmin'] = 'superadmin/obat';
-$route['income-superadmin'] = 'superadmin/income';
-$route['pharmacist-superadmin'] = 'superadmin/pharmacist';
-$route['selling-superadmin'] = 'superadmin/selling';
 
-$route['admin'] = 'admin/index';
-$route['dashboard-admin'] = 'admin/dashboard';
-$route['sales-admin'] = 'admin/sales';
-$route['stok-admin'] = 'admin/stok';
-$route['expired-admin'] = 'admin/expired';
-$route['register-admin'] = 'admin/register';
+//superadmin
+$route['income'] = 'income';
+$route['report'] = 'report';
+$route['pharmacist'] = 'pharmacist';
+
+//all
+$route['obat'] = 'obat';
+$route['expired'] = 'expired';
+$route['supply'] = 'supply';
+
+//admin
+$route['sales'] = 'sales';
+$route['selling'] = 'selling';
+

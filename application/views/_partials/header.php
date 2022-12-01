@@ -13,13 +13,13 @@
       var day = new Date();
       var hr = day.getHours();
       if (hr >= 4 && hr < 12) {
-          document.write("Good Morning");
+          document.write("Selamat Pagi!");
       } else if (hr >= 12 && hr <= 16) {
-          document.write("Good Afternoon");
-      } else if (hr >= 16 && hr <= 23) {
-          document.write("Good Evening");
+          document.write("Selamat  Siang!");
+      } else if (hr >= 16 && hr <= 18) {
+          document.write("Selamat Sore");
       } else {
-          document.write("Good Night");
+          document.write("Selamat Malam");
       }
       document.write("</b>");
   </script> <br> <span id="clock"></span>
