@@ -40,34 +40,20 @@
                         </div>
                         <div class="card-body">
                           <div class="table-responsive">
-                            <table id="example" class="display table table-striped table-hover" >
+                            <table id="example" class="display table table-danger table-hover" >
                               <thead>
                                 <tr>
                                   <th>Kode Obat</th>
                                   <th>Nama Obat</th>
+                                  <th>Jenis Obat</th>
                                   <th>Stok</th>
                                   <th>Kedaluwarsa</th>
                                   <th>Harga Beli</th>
                                   <th>Harga Jual</th>
-                                  <th>Ditambahkan pada</th>
-                                  <th>Ditambahkan oleh</th>
-                                  <th>Diupdate pada</th>
-                                  <th>Diupdate oleh</th>
                                   </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <td>Row 1 Data 1</td>
-                                  <td>Row 1 Data 2</td>
-                                  <td>Row 1 Data 1</td>
-                                  <td>Row 1 Data 2</td>
-                                  <td>Row 1 Data 1</td>
-                                  <td>Row 1 Data 2</td>
-                                  <td>Row 1 Data 2</td>
-                                  <td>Row 1 Data 1</td>
-                                  <td>Row 1 Data 2</td>
-                                  <td>Row 1 Data 1</td>
-                                </tr>
+                                
                               </tbody>
                             </table>
                           </div>
@@ -81,8 +67,44 @@
         <?php $this->load->view("_partials/js.php") ?>
     </body>
     <script>
-      $(document).ready(function () {
-          $('#example').DataTable();
+      var save_method; //for save method string
+      var table;
+
+      $(document).ready(function() {
+
+              //datatables
+              table = $('#example').DataTable({ 
+
+                  "processing": true, //Feature control the processing indicator.
+                  "serverSide": true, //Feature control DataTables' server-side processing mode.
+                  "order": [], //Initial no order.
+
+                  // Load data for the table's content from an Ajax source
+                  "ajax": {
+                      "url": "<?php echo site_url('expired/ajax_list')?>",
+                      "type": "POST"
+                  },
+
+                  //Set column definition initialisation properties.
+                  "columnDefs": [
+                  { 
+                      "targets": [ -1 ], //last column
+                      "orderable": false, //set not orderable
+                  },
+                  ],
+
+              });
+
+              //datepicker
+              $('.datepicker').datepicker({
+                  autoclose: true,
+                  format: "yyyy-mm-dd",
+                  todayHighlight: true,
+                  orientation: "top auto",
+                  todayBtn: true,
+                  todayHighlight: true,  
+              });
+
       });
     </script>
 </html>

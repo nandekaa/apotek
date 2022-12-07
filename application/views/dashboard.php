@@ -17,7 +17,7 @@
                     <div class="col-sm-6 col-lg-3">
                       <div class="card text-center border-secondary mb-3">
                         <div class="card-body text-dark">
-                          <div class="mb-3 text-secondary">
+                          <div class="mb-2 text-secondary">
                             <i class="fa fa-cart-plus fa-3x" aria-hidden="true"></i>
                           </div>
                           <h3><strong>20.000.000,00</strong></h3>
@@ -80,23 +80,11 @@
                     <div class="col-sm-6 col-lg-3">
                       <div class="card text-center border-warning mb-3">
                         <div class="card-body text-dark">
-                          <div class="mb-3 text-warning">
+                          <div class="mb-2 text-warning">
                             <i class="fa fa-money fa-3x" aria-hidden="true"></i>
                           </div>
-                          <h3><strong>15.000.000,00</strong></h3>
-                          <div class="row mx-2">
-                          <h6 class="col-6">Expense :</h6>
-                          <div class="dropdown-center col-5">
-                              <a class="dropdown-toggle text-dark" style="text-decoration:none;" type="button" data-coreui-toggle="dropdown" aria-expanded="false">
-                                Jan 2022</a>
-                              <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Jan 2022</a></li>
-                                <li><a class="dropdown-item" href="#">Feb 2022</a></li>
-                                <li><a class="dropdown-item" href="#">Mar 2022</a></li>
-                                <li><a class="dropdown-item" href="#">Apr 2022</a></li>
-                              </ul>
-                            </div>
-                          </div>
+                          <h3><strong><?php echo $pengeluaran; ?></strong></h3>
+                          <h6>Pengeluaran : <span id="month"></span></h6>  
                         </div>
                         <div class="card-footer bg-warning text-white border-warning"><a href="income" class="text-white" style="text-decoration:none;">View Detailed Report <svg class="icon">
                                   <use xlink:href="<?php echo base_url('assets/@coreui/icons/svg/free.svg#cil-chevron-double-right')?>"></use>
@@ -111,7 +99,7 @@
                           <div class="mb-3 text-primary">
                             <i class="fa fa-medkit fa-3x" aria-hidden="true"></i>
                           </div>
-                          <h3><strong>298</strong></h3>
+                          <h3><strong><?php echo $need; ?></strong></h3>
                           <div class="row mx-2">
                           <h6>Need Supply</h6>
                           </div>
@@ -128,7 +116,7 @@
                           <div class="mb-3 text-danger">
                             <i class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i>
                           </div>
-                          <h3><strong>20</strong></h3>
+                          <h3><strong><?php echo $exp; ?></strong></h3>
                           <div class="row mx-2">
                           <h6>Expired Drugs</h6>
                           </div>
@@ -187,5 +175,13 @@
         </div>
         <?php $this->load->view("_partials/footer.php") ?>
         <?php $this->load->view("_partials/js.php") ?>
+        <script>
+          window.onload = function() {
+              var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+              var date = new Date();
+
+              document.getElementById('month').innerHTML = months[date.getMonth()] + ' ' + date.getFullYear();
+          };
+        </script>
     </body>
 </html>
