@@ -75,10 +75,10 @@ class Obat_model extends CI_Model
 		return $this->db->count_all_results();
 	}
 
-	public function get_by_id($kode_obat)
+	public function get_by_id($id)
 	{
 		$this->db->from($this->table);
-		$this->db->where('kode_obat',$kode_obat);
+		$this->db->where('kode_obat',$id);
 		$query = $this->db->get();
 
 		return $query->row();
@@ -96,10 +96,27 @@ class Obat_model extends CI_Model
 		return $this->db->affected_rows();
 	}
 
-	public function delete_by_id($kode_obat)
+	public function delete_by_id($id)
 	{
-		$this->db->where('kode_obat', $kode_obat);
+		$this->db->where('kode_obat', $id);
 		$this->db->delete($this->table);
 	}
 
+	public function get_obat()
+	{
+		$tm_obat=$this->db
+		->where('expired >= curdate()')
+		->get('obat')
+		->result();
+		return $tm_obat;
+	}
+
+	public function detail($a)
+		{
+			$tm_obat=$this->db
+			->where('kode_obat',$a)
+			->get('obat')
+			->row();
+			return $tm_obat;
+	}
 }

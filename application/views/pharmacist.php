@@ -29,13 +29,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                              <tr>
-                                                  <td>Row 1 Data 1</td>
-                                                  <td>Row 1 Data 2</td>
-                                                  <td>Row 1 Data 1</td>
-                                                  <td>Row 1 Data 2</td>
-                                                  <td>Row 1 Data 1</td>
-                                              </tr>
+                                              
                                           </tbody>
                                         </table>
                                     </div>
@@ -102,11 +96,12 @@
 
               //Ajax Load data from ajax
               $.ajax({
-                  url : "<?php echo site_url('pharmacist/ajax_edit/')?>/" + id,
+                  url : "<?php echo site_url('pharmacist/ajax_edit/')?>" + id,
                   type: "GET",
                   dataType: "JSON",
                   success: function(data)
                   {
+                      $('[name="id"]').val(data.id);
                       $('[name="name"]').val(data.name);
                       $('[name="username"]').val(data.username);
                       $('[name="no_hp"]').val(data.no_hp);
@@ -206,9 +201,9 @@
             <div class="modal-body form">
                 <form action="#" id="form" class="form-horizontal"> 
                     <div class="form-body">
-                            <input name="id" class="form-control" type="hidden">
-                            <input name="akses" class="form-control" type="hidden" value="2">
-                            <input name="status" class="form-control" type="hidden" value="1">
+                            <input name="id" type="hidden">
+                            <input name="akses" type="hidden" value="2">
+                            <input name="status" type="hidden" value="1">
                         <div class="form-group">
                             <label class="control-label col-md-3">Nama Apoteker</label>
                             <div class="col-md-12">

@@ -10,73 +10,64 @@
             <div class="body flex-grow-1 px-3">
                 <div class="container-lg">
                    <h2>Employee Sales</h2>
-                    <div class="card mt-5">
-                        <form class="row card-body m-2">
-                            <p>FILTER LAPORAN</p>
-                            <div class="col-5">
-                                <label>From Date</label>
-                                <select class="form-select">
-                                    <option selected>Month, Year</option>
-                                    <option value="01/01/2023">January 2023</option>
-                                    <option value="02/01/2023">February 2023</option>
-                                    <option value="03/01/2023">March 2023</option>
-                                </select>
-                            </div>
-                            <div class="col-5">
-                                <label>End Date</label>
-                                <select class="form-select">
-                                    <option selected>Month, Year</option>
-                                    <option value="01/01/2023">January 2023</option>
-                                    <option value="02/01/2023">February 2023</option>
-                                    <option value="03/01/2023">March 2023</option>
-                                </select>
-                            </div>
-                            <div class="col-2">
-                                <button type="submit" class="btn btn-secondary mt-4">Show</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="card mt-5">
-                        <div class="row card-body m-2">
-                            <p>Laporan Penjualan Pegawai</p>
-                            <div class="col-6">
-                                <p>From Date : <span>2019/06/01</span></p>
-                                <p>End Date : <span>2019/06/01</span></p>
-                            </div>
-                            <div class="col-6">
-                                <p>ID Pegawai : <span>1029423912</span></p>
-                                <p>Nama Pegawai : <span>Sulistyawati</span></p>
-                            </div>
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table id="example" class="table table-hover" >
-                                        <thead>
-                                            <tr>
-                                                <th>No.</th>
-                                                <th>Tanggal</th>
-                                                <th>Kode Obat</th>
-                                                <th>Nama Obat</th>
-                                                <th>QTY</th>
-                                                <th>Harga</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Row 1 Data 1</td>
-                                                <td>Row 1 Data 2</td>
-                                                <td>Row 1 Data 1</td>
-                                                <td>Row 1 Data 2</td>
-                                                <td>Row 1 Data 1</td>
-                                                <td>Row 1 Data 2</td>
-                                                <td>Row 1 Data 1</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                   <div class="row">
+                    <div class="col-8">
+                    <div class="row">
+                        <?php if ($obat === 'kosong'): ?>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="alert alert-info">Masakan Kosong</div>
+                                    </div>
                                 </div>
+                            </div>
+                        <?php else: ?>
+                            <?php foreach ($obat as $key => $value): ?>
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="card-body" id="<?php echo $value->kode_obat ?>">
+                                            <h3 class="card-title mb-2"><?php echo $value->nama_obat ?></h3>
+                                            <h4 class="mb-2"><?php echo $value->jenis_obat ?></h3>
+                                            <span class="text-secondary">Rp <?php echo $value->harga_jual ?></span></span>
+                                            <div class="input-group mt-3">
+                                                <input type="number" class="form-control" placeholder="0" min="0">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary tambah" disabled>Tambah</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
+                        <?php endif ?>
+                    </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <h5 class="card-header">Data Pesanan</h5>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item kosong">Kosong</li>
+                                </ul>
+                                 <div class="form-group mt-3">
+                                    <select name="no_meja" class="form-control select2" required>
+                                        <?php if ($meja === 'kosong'): ?>
+                                            <option value="" class="d-none">Meja Isi Semua</option>
+                                        <?php else: ?>
+                                            <option value="" class="d-none">Pilih No Meja</option>
+                                            <?php foreach ($meja as $key => $value): ?>
+                                                <option value="<?php echo $value->no_meja ?>"><?php echo $value->no_meja ?></option>
+                                            <?php endforeach ?>
+                                        <?php endif ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary btn-block bayar" disabled>Bayar</button>
                             </div>
                         </div>
                     </div>
+                </div>
                     <div class="row mt-2">
                         <div class="col-10"></div>
                         <a href="#" class="btn btn-secondary col-2"><i class="fa fa-file" aria-hidden="true"></i> Cetak PDF</a>

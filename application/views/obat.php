@@ -82,7 +82,9 @@
                                   <th>Expired</th>
                                   <th>Harga Beli</th>
                                   <th>Harga Jual</th>
+                                  <?php if($this->session->userdata('access')=='Superadmin'){ ?>
                                   <th>Operasi</th>
+                                  <?php } ?>
                                   </tr>
                               </thead>
                               <tbody>
@@ -148,7 +150,7 @@
               $('.modal-title').text('Tambah Obat'); // Set Title to Bootstrap modal title
           }
 
-          function edit_obat(kode_obat)
+          function edit_obat(id)
           {
               save_method = 'update';
               $('#form')[0].reset(); // reset form on modals
@@ -157,12 +159,12 @@
 
               //Ajax Load data from ajax
               $.ajax({
-                  url : "<?php echo site_url('obat/ajax_edit/')?>/" + kode_obat,
+                  url : "<?php echo site_url('obat/ajax_edit/')?>" + id,
                   type: "GET",
                   dataType: "JSON",
                   success: function(data)
                   {
-                      $('[name="kode_obat"]').val(data.kode_obat).attr("disabled","disabled");
+                      $('[name="kode_obat"]').val(data.kode_obat);
                       $('[name="nama_obat"]').val(data.nama_obat);
                       $('[name="jenis_obat"]').val(data.jenis_obat);
                       $('[name="stok"]').val(data.stok);
@@ -262,13 +264,7 @@
             <div class="modal-body form">
                 <form action="#" id="form" class="form-horizontal"> 
                     <div class="form-body">
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Kode Obat</label>
-                            <div class="col-md-12">
-                                <input name="kode_obat" placeholder="Kode Obat" class="form-control" type="text">
-                                <span class="help-block"></span>
-                            </div>
-                        </div>
+                        <input name="kode_obat" type="hidden">
                         <div class="form-group">
                             <label class="control-label col-md-3">Nama Obat</label>
                             <div class="col-md-12">

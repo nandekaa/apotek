@@ -54,7 +54,6 @@ class Pharmacist extends CI_Controller {
     public function ajax_add()
 	{
 		$data = array(
-				'id' => $this->input->post('id'),
 				'name' => $this->input->post('name'),
 				'username' => $this->input->post('username'),
 				'no_hp' => $this->input->post('no_hp'),
@@ -69,7 +68,6 @@ class Pharmacist extends CI_Controller {
     public function ajax_update()
 	{
 		$data = array(
-            'id' => $this->input->post('id'),
 			'name' => $this->input->post('name'),
 			'username' => $this->input->post('username'),
 			'no_hp' => $this->input->post('no_hp'),
@@ -83,7 +81,7 @@ class Pharmacist extends CI_Controller {
 
     public function ajax_delete($id)
 	{
-		$this->obat->delete_by_id($id);
+		$this->user->delete_by_id($id);
 		echo json_encode(array("status" => TRUE));
 	}
 }

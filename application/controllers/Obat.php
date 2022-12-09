@@ -53,16 +53,15 @@ class Obat extends CI_Controller {
     echo json_encode($output);
     }
     
-    public function ajax_edit($kode_obat)
+    public function ajax_edit($id)
 	{
-		$data = $this->obat->get_by_id($kode_obat);
+		$data = $this->obat->get_by_id($id);
 		echo json_encode($data);
 	}
 
     public function ajax_add()
 	{
 		$data = array(
-				'kode_obat' => $this->input->post('kode_obat'),
 				'nama_obat' => $this->input->post('nama_obat'),
 				'jenis_obat' => $this->input->post('jenis_obat'),
 				'stok' => $this->input->post('stok'),
@@ -77,7 +76,6 @@ class Obat extends CI_Controller {
     public function ajax_update()
 	{
 		$data = array(
-            'kode_obat' => $this->input->post('kode_obat'),
             'nama_obat' => $this->input->post('nama_obat'),
             'jenis_obat' => $this->input->post('jenis_obat'),
             'stok' => $this->input->post('stok'),
@@ -89,10 +87,18 @@ class Obat extends CI_Controller {
 		echo json_encode(array("status" => TRUE));
 	}
 
-    public function ajax_delete($kode_obat)
+    public function ajax_delete($id)
 	{
-		$this->obat->delete_by_id($kode_obat);
+		$this->obat->delete_by_id($id);
 		echo json_encode(array("status" => TRUE));
+	}
+
+	public function detail($id)
+		{
+			$tm_obat=$this->db->where('kode_obat',$id)
+			->get('obat')
+			->row();
+			return $tm_obat;
 	}
 
 }
